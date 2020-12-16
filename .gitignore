@@ -29,3 +29,5 @@ target/
 mvnw
 mvnw.cmd
 HELP.md
+.DS_Store
+.mvn/
