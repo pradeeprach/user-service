@@ -38,12 +38,8 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/users/{user_id}")
-	public String deleteUser(@PathVariable(name = "user_id") Long userID) {
-		String result = "Delete Unsuccessful";
-		if (userService.deleteUser(userID)) {
-			result = "Delete Successful";
-		}
-		return result;
+	public boolean deleteUser(@PathVariable(name = "user_id") Long userID) {
+		return userService.deleteUser(userID);
 	}
 	
 	@PutMapping("users/{user_id}")

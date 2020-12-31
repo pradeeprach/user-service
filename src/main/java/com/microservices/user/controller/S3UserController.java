@@ -38,12 +38,8 @@ public class S3UserController {
 	}
 	
 	@DeleteMapping("/users/{user_id}")
-	public String deleteUser(@PathVariable(name = "user_id") Long userID) {
-		String result = "Delete Unsuccessful";
-		if (s3UserService.deleteUser(userID)) {
-			result = "Delete Successful";
-		}
-		return result;
+	public boolean deleteUser(@PathVariable(name = "user_id") Long userID) {
+		return s3UserService.deleteUser(userID);
 	}
 	
 	@PutMapping("users/{user_id}")

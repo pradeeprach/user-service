@@ -57,8 +57,7 @@ public class S3Service {
 		return users;
 	}
 	
-	public boolean saveUserRecordsToS3(List<S3User> users) {
-		boolean isSuccessful = false;
+	public void saveUserRecordsToS3(List<S3User> users) {
 		File usersFile = new File(getFullFilePath(USERS_FILE_NAME));
 		try (FileOutputStream fileOutputStream = new FileOutputStream(usersFile);
 				ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
@@ -68,7 +67,6 @@ public class S3Service {
 		} catch (IOException e) {
 			logger.error("Error While writing users list to s3");
 		}
-		return isSuccessful;
 	}
 	
 	public synchronized long getID() {
