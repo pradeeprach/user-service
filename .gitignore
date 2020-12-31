@@ -31,3 +31,4 @@ mvnw.cmd
 HELP.md
 .DS_Store
 .mvn/
+/s3-files/
