@@ -18,3 +18,4 @@ eureka:
   client:
     service-url: 
         defaultZone: http://localhost:10010/eureka
+temp: asdf
