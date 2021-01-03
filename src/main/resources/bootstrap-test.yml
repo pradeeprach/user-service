@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+
+aws:
+  region: ap-southeast-1
+  bucket-name: bucket
+  
+local:
+  users:
+    file:
+      path: s3-files
